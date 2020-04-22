@@ -8,7 +8,19 @@
 </head>
 <body>
 	<script type="text/javascript">
-		
+		let number = parseInt(prompt("Введите трехзначное число"));
+		let a = number % 10;
+		let b = parseInt(number / 10) % 10;
+		let c = parseInt(number / 100);
+		if (a === b) {
+			alert(true);
+		} else if (a === c) {
+			alert(true);
+		} else if (b === c) {
+			alert(true);
+		} else {
+			alert(false)
+		}
 	</script>
 </body>
 </html>
