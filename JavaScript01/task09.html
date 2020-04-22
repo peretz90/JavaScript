@@ -1,0 +1,16 @@
+<!-- 9. Запросите у пользователя трехзначное число и выведите
+его задом наперед. Для решения задачи вам понадобится
+оператор % (остаток от деления). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task09</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let num = prompt("Введите трехзначное число");
+		alert("" + num%10 + parseInt(num/10)%10 + parseInt(num/100)%10);
+	</script>
+</body>
+</html>
