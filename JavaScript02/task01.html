@@ -1,0 +1,24 @@
+<!-- 1. Запросить у пользователя его возраст и определить, кем он
+является: ребенком (0–2), подростком (12–18), взрослым
+(18_60) или пенсионером (60– ...). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task01</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let age = prompt("Введите ваш возраст");
+		if (age >= 0 && age < 12) {
+			alert("Вы являетесь ребенком");
+		} else if (age >= 12 && age < 18) {
+			alert("Вы являетесь подростком");
+		} else if (age >= 18 && age < 60) {
+			alert("Вы взрослый человек");
+		} else {
+			alert("Вы пенсионер...");
+		}
+	</script>
+</body>
+</html>
