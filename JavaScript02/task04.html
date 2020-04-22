@@ -10,7 +10,17 @@
 <body>
   <script type="text/javascript">
     let year = prompt("Введите год");
-
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        alert("Високосный год");
+      } else {
+        alert("Обычный год");
+      }
+    } else if (year % 4 === 0) {
+      alert("Високосный год");
+    } else {
+      alert("Обычный год");
+    }
   </script>
 </body>
 </html>
