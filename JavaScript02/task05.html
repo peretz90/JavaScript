@@ -1,0 +1,19 @@
+<!--5. Запросить у пользователя пятиразрядное число и опреде-
+лить, является ли оно палиндромом.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task05</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function five_num(num) {
+      return num.charAt(0) === num.charAt(4)
+        && num.charAt(1) === num.charAt(3);
+    }
+    let num = prompt("Введите пятизначное число");
+    alert(five_num(num));
+  </script>
+</body>
+</html>

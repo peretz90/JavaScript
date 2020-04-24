@@ -1,0 +1,21 @@
+<!--8. Запросить у пользователя длину окружности и периметр
+квадрата. Определить, может ли такая окружность поме-
+ститься в указанный квадрат.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task08</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let circle = prompt("Введите длинну окружности");
+    let square = prompt("Введите периметр квадрата");
+    if (square / 4 >= circle / Math.PI) {
+      alert(true);
+    } else {
+      alert(false);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!--9. Задать пользователю 3 вопроса, в каждом вопросе по 3 ва-
+рианта ответа. За каждый правильный ответ начисляется 2
+балла. После вопросов выведите пользователю количество
+набранных баллов.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task09</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let count = 0;
+    switch (prompt("Зимой и летом одним цветом\n" +
+      "1. Сосна\n" +
+      "2. Ель\n" +
+      "3. Можевельник")) {
+      case "2":
+        count += 2;
+        break;
+      default :
+        break;
+    }
+    switch (prompt("Ходит, ходит, а в дом не заходит\n" +
+      "1. Часы\n" +
+      "2. Ветер\n" +
+      "3. Дверь")) {
+      case "3":
+        count += 2;
+        break;
+      default:
+        break;
+    }
+    switch (prompt("У какого зверя больше всего зубов\n" +
+      "1. Улитка\n" +
+      "2. Крокодил\n" +
+      "3. Акула")) {
+      case "1":
+        count += 2;
+        break;
+      default:
+        break;
+    }
+    alert("Очков набранно - " + count);
+  </script>
+</body>
+</html>

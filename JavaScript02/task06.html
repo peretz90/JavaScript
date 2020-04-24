@@ -1,0 +1,29 @@
+<!--6. Написать конвертор валют. Пользователь вводит количе-
+ство USD, выбирает, в какую валюту хочет перевести: EUR,
+UAN или AZN, и получает в ответ соответствующую сумму.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task06</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let value_dollars = prompt("Введите сумму долларов");
+    let name_money = prompt("Выберите валюту (EUR, UAN, AZN)").toUpperCase();
+    switch (name_money) {
+      case "EUR":
+        alert((+value_dollars * 0.9265) + " EUR");
+        break;
+      case "UAN":
+        alert((+value_dollars * 7.0811) + " UAN");
+        break;
+      case "AZN":
+        alert((+value_dollars * 1.7) + " AZN");
+        break;
+      default:
+        alert("Неверная валюта...");
+    }
+  </script>
+</body>
+</html>

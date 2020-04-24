@@ -1,0 +1,33 @@
+<!--10. Запросить дату (день, месяц, год) и вывести следующую
+за ней дату. Учтите возможность перехода на следующий
+месяц, год, а также високосный год.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task10</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let year = +prompt("Введите год (цифры)");
+    let month = +prompt("Введите месяц (цифры)");
+    let day = +prompt("Введите день (цифры)");
+    let date = new Date(year, month-1, day);
+
+    function formatDate(date) {
+      let dd = date.getDate();
+      if (dd < 10) dd = '0' + dd;
+
+      let mm = date.getMonth() + 1;
+      if (mm < 10) mm = '0' + mm;
+
+      let yy = date.getFullYear();
+
+      return dd + '.' + mm + '.' + yy;
+    }
+
+    date.setDate(date.getDate() + 1);
+    alert(formatDate(date));
+  </script>
+</body>
+</html>
