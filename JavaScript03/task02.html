@@ -1,0 +1,33 @@
+<!--2. Запросить 2 числа и найти только наибольший общий
+делитель.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task02</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let firstNumber = +prompt("Введите первое число");
+    let secondNumber = +prompt("Введите второе число");
+    let result = 1;
+    let end = firstNumber > secondNumber ? firstNumber : secondNumber;
+    let exit = false;
+    while (!exit) {
+      for (let i = 2; i <= end; i++) {
+        if (firstNumber % i === 0 && secondNumber % i === 0) {
+          result *= i;
+          firstNumber /= i;
+          secondNumber /= i;
+          break;
+        }
+        if (i > firstNumber || i > secondNumber) {
+          exit = true;
+          break;
+        }
+      }
+    }
+    alert(result);
+  </script>
+</body>
+</html>

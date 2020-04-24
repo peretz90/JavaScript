@@ -1,0 +1,22 @@
+<!--4. Определить количество цифр в введенном числе.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task04</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let number = +prompt("Введите многозначное число");
+    let count = 1;
+    while (number !== 0) {
+      number /= 10;
+      number = parseInt(number);
+      if (number !== 0) {
+        count++;
+      }
+    }
+    alert("колличество цифр в числе - " + count);
+  </script>
+</body>
+</html>

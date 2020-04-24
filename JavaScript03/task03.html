@@ -1,0 +1,28 @@
+<!--3. Запросить у пользователя число и вывести все делители
+этого числа.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task03</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let number = +prompt("Введите число");
+    let result = '';
+    let exit = false;
+    while (!exit) {
+      for (let i = 2; i <= number/2; i++) {
+        if (number % i === 0) {
+          result += i;
+          if (parseInt(number / 2) > i) {
+            result += ', ';
+            exit = true;
+          }
+        }
+      }
+    }
+    alert(result);
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!--1. Подсчитать сумму всех чисел в заданном пользователем
+диапазоне.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task01</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let firstNumber = +prompt("Введите первое число");
+    let secondNumber = +prompt("Введите второе число");
+    let start, end, result = 0;
+    if (firstNumber < secondNumber) {
+      start = firstNumber;
+      end = secondNumber;
+    } else {
+      start = secondNumber;
+      end = firstNumber;
+    }
+    for (let i = start; i <= end; i++) {
+      result += i;
+    }
+    alert(result);
+  </script>
+</body>
+</html>
