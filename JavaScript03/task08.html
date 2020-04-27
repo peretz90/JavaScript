@@ -1,0 +1,24 @@
+<!--8. Зациклить вывод дней недели таким образом: «День недели.
+Хотите увидеть следующий день?» и так до тех пор, пока
+пользователь нажимает OK.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task08</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let date = new Date();
+    function getWeekDay(date) {
+      let weekday = ['Воскресение', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+      return weekday[date.getDay()];
+    }
+    while (true) {
+      alert(getWeekDay(date) + '\n' +
+        'Показать следующий день недели?');
+      date.setDate(date.getDate() + 1);
+    }
+  </script>
+</body>
+</html>

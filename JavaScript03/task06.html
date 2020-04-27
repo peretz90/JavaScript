@@ -1,0 +1,54 @@
+<!--6. Зациклить калькулятор. Запросить у пользователя 2 числа
+и знак, решить пример, вывести результат и спросить, хо-
+чет ли он решить еще один пример. И так до тех пор, пока
+пользователь не откажется.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task06</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let bool = true;
+
+    function operation(string, num1, num2) {
+      switch (string) {
+        case '+':
+          return num1 + num2;
+        case '-':
+          return num1 - num2;
+        case '*':
+          return num1 * num2;
+        case '/':
+          return num1 / num2;
+        default:
+          operation(prompt('введи коректное действие'), num1, num2);
+      }
+    }
+
+    function yesOrNo(string) {
+      switch (string) {
+        case '1':
+          return;
+        case '2':
+          bool = false;
+          return;
+        default:
+          yesOrNo(prompt('Решить еще один пример?\n' +
+            '1. Да\n' +
+            '2. Нет'));
+      }
+    }
+
+    while (bool) {
+      let firstNumber = +prompt('Введите первое число');
+      let secondNumber = +prompt('Введите второе число');
+      alert(operation(prompt('Введите действие'), firstNumber, secondNumber));
+      yesOrNo('Решить еще один пример?\n' +
+        '1. Да\n' +
+        '2. Нет');
+    }
+  </script>
+</body>
+</html>

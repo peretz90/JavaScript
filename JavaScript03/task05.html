@@ -1,0 +1,37 @@
+<!--5. Запросить у пользователя 10 чисел и подсчитать, сколько
+он ввел положительных, отрицательных и нулей. При этом
+также посчитать, сколько четных и нечетных. Вывести
+статистику на экран. Учтите, что достаточно одной пере-
+менной (не 10) для ввода чисел пользователем.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task05</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let countEven = 0, countOdd = 0, countPositive = 0, countNegative = 0, countZero = 0;
+    for (let i = 0; i < 10; i++) {
+      let number = +prompt("Введите любое целое число");
+      if (number > 0) {
+        countPositive++;
+      } else if (number < 0) {
+        countNegative++;
+      } else {
+        countZero++;
+      }
+      if (number % 2 === 0) {
+        countEven++;
+      } else {
+        countOdd++;
+      }
+    }
+    alert('Четных чисел - ' + countEven + '\n' +
+      'Нечетных чисел - ' + countOdd + '\n' +
+      'Положительных чисел - ' + countPositive + '\n' +
+      'Отрицательных чисел - ' + countNegative + '\n' +
+      'Нулей - ' + countZero);
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!--7. Запросить у пользователя число и на сколько цифр его
+сдвинуть. Сдвинуть цифры числа и вывести результат (если
+число 123456 сдвинуть на 2 цифры, то получится 345612).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task07</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let userNumber = +prompt("Введите многозначное целое число");
+    let shift = +prompt("На сколько сдвинуть число");
+    let count = 1;
+    let result, number = userNumber, sub = 1;
+    while (number !== 0) {
+      number /= 10;
+      number = ~~number;
+      if (number !== 0) {
+        count++;
+      }
+    }
+    for (let i = 0; i < count-shift; i++) {
+      sub *= 10;
+    }
+    result = (userNumber % sub).toString();
+    result = result + (userNumber / sub ^ 0);
+    alert(result);
+
+  </script>
+</body>
+</html>
