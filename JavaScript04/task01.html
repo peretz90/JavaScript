@@ -1,0 +1,41 @@
+<!--Задание 1
+Создать объект, описывающий автомобиль (производитель,
+модель, год выпуска, средняя скорость), и следующие функции
+для работы с этим объектом.
+1. Функция для вывода на экран информации об автомобиле.
+2. Функция для подсчета необходимого времени для пре-
+одоления переданного расстояния со средней скоростью.
+Учтите, что через каждые 4 часа дороги водителю необхо-
+димо делать перерыв на 1 час.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task01</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function Car(pManufacturer, pModel, pYear, pSpeed) {
+      this.manufacturer = pManufacturer;
+      this.model = pModel;
+      this.year = pYear;
+      this.speed = pSpeed;
+      this.printInfo = function () {
+        document.write(`Производитель: ${this.manufacturer}, Модель: ${this.model}, Год выпуска: ${this.year}, Средняя скорость: ${this.speed}<br>`);
+      }
+      this.timeForDistance = function (distance) {
+        let time = distance / this.speed;
+        if (time > 4) {
+          time += (time / 4 ^ 0);
+        }
+        document.write(`Для расстояния ${distance} км нужно ${time} ч.<br>`)
+      }
+    }
+    let bmw = new Car('BMW', 'X6', 1993, 160);
+    bmw.printInfo();
+    bmw.timeForDistance(640);
+    bmw.timeForDistance(1560);
+    bmw.timeForDistance(641);
+  </script>
+</body>
+</html>

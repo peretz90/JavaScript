@@ -1,0 +1,126 @@
+<!--Задание 2
+Создать объект, хранящий в себе отдельно числитель и зна-
+менатель дроби, и следующие функции для работы с этим объ-
+ектом.
+1. Функция сложения 2-х объектов-дробей.
+2. Функция вычитания 2-х объектов-дробей.
+3. Функция умножения 2-х объектов-дробей.
+4. Функция деления 2-х объектов-дробей.
+5. Функция сокращения объекта-дроби.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .fraction, .top, .bottom {
+      padding: 0 5px;
+    }
+
+    .fraction {
+      display: inline-block;
+      text-align: center;
+      margin: auto 0;
+    }
+
+    .bottom{
+      border-top: 1px solid #000;
+      display: block;
+    }
+
+    #text {
+      margin: auto 0;
+    }
+
+    .block {
+      display: flex;
+    }
+  </style>
+  <title>Task02</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function Fraction(numerator, denominator) {
+      this.numerator = +numerator;
+      this.denominator = +denominator;
+
+      this.nok = function (fraction) {
+        let result = Math.max(this.denominator, fraction.denominator);
+        while (result % Math.min(this.denominator, fraction.denominator) !== 0) {
+          result += Math.max(this.denominator, fraction.denominator);
+        }
+        return result;
+      }
+
+      this.plus = function(fraction) {
+        let numerator = fraction.numerator * (this.nok(fraction)/fraction.denominator) + this.numerator * (this.nok(fraction)/this.denominator);
+        let denominator = this.nok(fraction);
+        let result = new Fraction(numerator, denominator);
+        this.simplifying(result);
+        return result;
+      }
+
+      this.minus = function(fraction) {
+        let numerator = this.numerator * (this.nok(fraction)/this.denominator) - fraction.numerator * (this.nok(fraction)/fraction.denominator);
+        let denominator = this.nok(fraction);
+        let result = new Fraction(numerator, denominator);
+        this.simplifying(result);
+        return result;
+      }
+
+      this.multiply = function(fraction) {
+        let numerator = this.numerator * fraction.numerator;
+        let denominator = this.denominator * fraction.denominator;
+        let result = new Fraction(numerator, denominator);
+        this.simplifying(result);
+        return result;
+      }
+
+      this.divide = function(fraction) {
+        let numerator = this.numerator * fraction.denominator;
+        let denominator = this.denominator * fraction.numerator;
+        let result = new Fraction(numerator, denominator);
+        this.simplifying(result);
+        return result;
+      }
+
+      this.print = function () {
+        return `<span class="fraction"><span class="top">${this.numerator}</span><span class="bottom">${this.denominator}</span></span>`;
+      }
+
+      this.simplifying = function (fraction) {
+        let a = fraction.numerator;
+        let b = fraction.denominator;
+        if (a % b === 0) {
+          fraction.numerator = a / b;
+          fraction.denominator = 1;
+        } else {
+          for (let i = 2; i <= Math.min(a, b); i++) {
+            if (a % i === 0 && b % i === 0) {
+              a /= i;
+              b /= i;
+              i--;
+            }
+          }
+          fraction.numerator = a;
+          fraction.denominator = b;
+        }
+      }
+    }
+    function str(str) {
+      return `<span id="text">${str}</span>`;
+    }
+    let num1 = new Fraction(2, 3);
+    let num2 = new Fraction(11, 25);
+    document.write(`<div class="block">${num1.print()}${str('+')}${num2.print()}${str('=')}${num1.plus(num2).print()}</div>`);
+    document.write(`<div class="block">${num1.print()}${str('-')}${num2.print()}${str('=')}${num1.minus(num2).print()}</div>`);
+    document.write(`<div class="block">${num1.print()}${str('&times;')}${num2.print()}${str('=')}${num1.multiply(num2).print()}</div>`);
+    document.write(`<div class="block">${num1.print()}${str('&divide;')}${num2.print()}${str('=')}${num1.divide(num2).print()}</div>`);
+
+  </script>
+</body>
+</html>
