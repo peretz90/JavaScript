@@ -6,8 +6,17 @@
 </head>
 <body>
   <script type="text/javascript">
-    let arr = ["apple", "pineapple", "orange"];
-    for (let val of arr) {document.write(val + '<br>');}
+    function Text(text, text2) {
+      this.text = text;
+      this.text2 = text2;
+
+      this.display = function () {
+        document.write(text + ' ' + text2);
+      }
+    }
+
+    let wer = new Text('123t');
+    wer.display();
   </script>
 </body>
 </html>
