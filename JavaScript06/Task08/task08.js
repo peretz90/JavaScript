@@ -14,8 +14,9 @@ function getXY(e) {
   return [x, y];
 }
 
-function onMouseDown() {
+function onMouseDown(e) {
   document.addEventListener('mousemove', resizeBlock, false);
+  e.preventDefault();
 }
 
 function onMouseUp() {
