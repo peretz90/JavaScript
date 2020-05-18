@@ -1,0 +1,15 @@
+ul {
+  display: none;
+  font-weight: normal;
+}
+.menu {
+  display: block;
+}
+
+.open {
+  display: block;
+}
+
+.fat {
+  font-weight: bolder;
+}

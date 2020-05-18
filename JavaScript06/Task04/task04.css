@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  position: relative;
+  margin: 30px auto;
+  background: blanchedalmond;
+  width: 350px;
+  height: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 5px 10px;
+  flex-direction: row;
+}
+
+#traffic_lights, #next {
+  border: #3e3e3e solid 1px;
+  border-radius: 10px;
+  height: 90px;
+  outline: none;
+  display: flex;
+  margin: auto;
+}
+
+#traffic_lights {
+  width: 250px;
+}
+
+#next {
+  width: 75px;
+  justify-content: center;
+  background: #e0e0e0;
+}
+
+#red, #yellow, #green {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #7b7b7b;
+  margin: auto;
+}
+

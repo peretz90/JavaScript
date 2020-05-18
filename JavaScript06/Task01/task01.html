@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task01</title>
+</head>
+<body>
+  <form id="nickname">
+    <input type="text" id="message">
+  </form>
+  <script type="text/javascript">
+    let input = document.getElementById("message"), value = input.value;
+
+    input.addEventListener("input", onInput);
+
+    function onInput(e) {
+      let newValue = e.target.value;
+      if (newValue.match(/[^a-zA-Zа-яА-Я ]/g)) {
+        input.value = value;
+        return;
+      }
+      value = newValue;
+    }
+  </script>
+</body>
+</html>

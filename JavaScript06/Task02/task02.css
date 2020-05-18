@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  display: flex;
+}
+
+#open_modal {
+  margin: 30px auto;
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+}
+
+#modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0,0,0,0.6);
+  z-index: 999;
+}
+
+#modal_content {
+  width: 400px;
+  height: 100px;
+  margin: 200px auto;
+  background: azure;
+  font-size: 30px;
+  text-align: center;
+  z-index: 1000;
+  opacity: 1;
+}
+
+#close_modal {
+  padding: 5px 10px;
+}
+
+
