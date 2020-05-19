@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  width: 500px;
+  height: 60px;
+  display: flex;
+  margin: 30px auto;
+  position: relative;
+  background: #fbffb2;
+}
+
+#scroll {
+  margin: auto;
+  width: 460px;
+  height: 20px;
+  background: #aeaeae;
+  position: relative;
+}
+
+#block {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: #0090ff;
+  left: -3px;
+  top: calc(50% - 14px);
+}

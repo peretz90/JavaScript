@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  position: relative;
+  margin: 30px auto;
+  width: 400px;
+  background: #faffdf;
+  padding: 15px;
+}
+
+button {
+  width: 100%;
+  margin-bottom: 15px;
+}
+label {
+  width: calc(50% - 15px);
+  display: block;
+  float: left;
+  text-align: center;
+  margin-bottom: 20px;
+}
+input {
+  width: 100px;
+}
+
+table {
+  display: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border: 1px solid #000;
+  border-spacing: 0;
+}
+th, td {
+  border: 1px solid #000;
+}
+
+caption {
+  text-align: left;
+  margin: 10px 0;
+}

@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  margin: auto;
+  position: relative;
+  width: 400px;
+  height: 270px;
+  background: #e3e1d6;
+}
+
+p {
+  padding: 15px;
+  font-weight: bold;
+}
+
+span {
+  padding: 10px;
+  display: block;
+}

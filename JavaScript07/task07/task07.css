@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  width: 650px;
+  font-size: 18px;
+  background: blanchedalmond;
+  margin: auto;
+  padding: 15px 15px 15px 45px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}

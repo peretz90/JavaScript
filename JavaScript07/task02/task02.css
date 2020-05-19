@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  width: 700px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  margin: 40px auto;
+  background: #a6ae93;
+}
+
+img {
+  width: 300px;
+  margin: auto;
+}
+
+span {
+  margin: auto;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}

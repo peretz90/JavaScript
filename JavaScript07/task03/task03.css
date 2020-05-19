@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  margin: 30px auto;
+  width: 700px;
+  position: relative;
+  border: 1px solid #002d50;
+}
+
+#title {
+  background: #1000b3;
+  color: ghostwhite;
+  padding: 5px;
+  border: 1px solid #002d50;
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+
+#text {
+  background: #c9edfd;
+  display: none;
+  padding: 5px;
+  border: 1px solid #002d50;
+  position: relative;
+}
