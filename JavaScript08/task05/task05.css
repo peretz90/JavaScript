@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  width: 500px;
+  background: #fff9d4;
+  margin: 30px auto;
+  padding: 8px;
+}
+
+#select, #choice, #saved {
+  width: calc(100% - 16px);
+  margin: 8px;
+  padding: 8px;
+}
+
+#choice, #saved {
+  display: none;
+}
+
+#select {
+  width: calc(100% - 32px);
+  display: flex;
+  border-bottom: 2px solid #6f6f6f;
+  justify-content: space-between;
+}
+
+
+#sel {
+  width: 90px;
+}
+
+#topic {
+  width: calc(100% - 16px);
+  display: block;
+  overflow: auto;
+}
+
+input {
+  width: 420px;
+  float: right;
+}
+
+#sav {
+  width: calc(100% - 16px);
+}
+
+ul {
+  margin: 5px 0;
+  width: calc(100% - 16px);
+}
+
+li {
+  border-bottom: 1px solid #c4c4c4;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+select {
+  width: 90px;
+  margin-right: 10px;
+}
+
+#name {
+  width: 45%;
+  text-align: left;
+}
