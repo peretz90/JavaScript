@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  width: 700px;
+  margin: 0 auto;
+  background: #fff9d4;
+}
+
+#search {
+  width: 300px;
+  margin: auto;
+}
+
+#search h3 {
+  width: 100%;
+  text-align: center;
+}
+
+#search_block {
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 15px;
+}
+
+#search_block h4, #search_block button {
+  width: calc(100% - 20px);
+  margin: 10px;
+  overflow: auto;
+}
+
+#search_block input, #search_block select {
+  float: right;
+}
+
+#search_block input {
+  width: 200px;
+}
+
+#search_block select {
+  width: 205px;
+}
+
+img {
+  width: 100px;
+  float: left;
+}
+
+#result {
+  overflow: auto;
+  display: flex;
+}
+
+#film {
+  width: calc(100%/3 - 20px);
+  border: 1px solid #000000;
+}
+
+#film div, #film button {
+  float: right;
+}
+
